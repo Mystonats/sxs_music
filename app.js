@@ -285,17 +285,10 @@ document.addEventListener("keydown", (e) => {
   else if (e.code === "ArrowLeft") step(-1);
 });
 
-fetch("tracks.json")
-  .then((r) => {
-    if (!r.ok) throw new Error("missing catalog");
-    return r.json();
-  })
-  .then((rows) => {
-    const presented = rows.map(present).filter((t) => t.section);
-    render(presented);
-    statusEl.remove();
-  })
-  .catch(() => {
-    statusEl.textContent =
-      "Could not load the playlist. Serve this folder over HTTP (for example: python3 -m http.server) and reload.";
-  });
+const rows = Array.isArray(window.TRACKS) ? window.TRACKS : [];
+if (!rows.length) {
+  statusEl.textContent = "Playlist catalog is missing.";
+} else {
+  render(rows.map(present).filter((t) => t.section));
+  statusEl.remove();
+}

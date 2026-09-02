@@ -2,13 +2,7 @@
 
 An unofficial fan playlist of the in-game music from **Sword x Staff**.
 
-This repository is private. GitHub Pages is not enabled on the current plan, so open the playlist locally:
-
-```bash
-python3 -m http.server
-```
-
-Then visit `http://localhost:8000`.
+Open `index.html` in a browser. That is the whole page.
 
 ## Credit
 
