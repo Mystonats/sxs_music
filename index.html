@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Unofficial Sword x Staff soundtrack playlist. Music belongs to Boltray Games.">
+  <title>Sword × Staff — Soundtrack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Noto+Sans+SC:wght@400;500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+  <header class="hero">
+    <p class="eyebrow">Unofficial fan collection</p>
+    <h1>Sword <span>×</span> Staff</h1>
+    <p class="lede">The music of Kanstein — kingdom themes, concert hall, festival nights, and seasonal airs.</p>
+    <nav class="jump" aria-label="Sections">
+      <a href="#kingdoms">Kingdoms</a>
+      <a href="#concert">Luo Tianyi</a>
+      <a href="#festival">Festival</a>
+      <a href="#seasonal">Seasonal</a>
+    </nav>
+  </header>
+
+  <main id="catalog">
+    <p class="status" id="status">Loading the playlist…</p>
+  </main>
+
+  <footer class="legal">
+    <p>
+      Music © Boltray Games / BOLTRAY PTE. LTD. All rights reserved.
+      This is an unofficial fan collection. Audio remains the property of Boltray.
+    </p>
+    <p>
+      Official site:
+      <a href="https://swordxstaff.boltray.com/" rel="noopener noreferrer">swordxstaff.boltray.com</a>
+    </p>
+  </footer>
+
+  <div class="player" id="player" hidden>
+    <div class="player-meta">
+      <p class="player-kicker" id="player-kicker">Now playing</p>
+      <p class="player-title" id="player-title">—</p>
+      <p class="player-sub" id="player-sub"></p>
+    </div>
+    <div class="player-controls">
+      <button type="button" id="btn-prev" aria-label="Previous track">⏮</button>
+      <button type="button" id="btn-play" class="play-main" aria-label="Play">▶</button>
+      <button type="button" id="btn-next" aria-label="Next track">⏭</button>
+    </div>
+    <div class="player-timeline">
+      <span id="time-now">0:00</span>
+      <input type="range" id="seek" min="0" max="0" value="0" step="0.1" aria-label="Seek">
+      <span id="time-end">0:00</span>
+    </div>
+    <div class="player-modes">
+      <label><input type="checkbox" id="mode-loop" checked> Loop</label>
+      <label><input type="checkbox" id="mode-through"> Play through</label>
+    </div>
+  </div>
+
+  <audio id="audio" loop></audio>
+  <script src="app.js"></script>
+</body>
+</html>

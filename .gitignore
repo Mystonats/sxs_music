@@ -1,0 +1,7 @@
+*.wem
+-
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
