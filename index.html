@@ -56,9 +56,15 @@
       <input type="range" id="seek" min="0" max="0" value="0" step="0.1" aria-label="Seek">
       <span id="time-end">0:00</span>
     </div>
-    <div class="player-modes">
-      <label><input type="checkbox" id="mode-loop" checked> Loop</label>
-      <label><input type="checkbox" id="mode-through"> Play through</label>
+    <div class="player-side">
+      <div class="player-volume">
+        <button type="button" id="btn-mute" aria-label="Mute">♪</button>
+        <input type="range" id="volume" min="0" max="1" value="0.55" step="0.01" aria-label="Volume">
+      </div>
+      <div class="player-modes">
+        <label><input type="checkbox" id="mode-loop" checked> Loop</label>
+        <label><input type="checkbox" id="mode-through"> Play through</label>
+      </div>
     </div>
   </div>
 

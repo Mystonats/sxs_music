@@ -59,14 +59,55 @@ const seek = $("seek");
 const loopToggle = $("mode-loop");
 const throughToggle = $("mode-through");
 
+const VOL_KEY = "sxs-volume";
+const DEFAULT_VOL = 0.55;
+
+function clampVol(n) {
+  return Math.min(1, Math.max(0, n));
+}
+
+function readSavedVol() {
+  const raw = localStorage.getItem(VOL_KEY);
+  const n = raw == null ? DEFAULT_VOL : Number(raw);
+  return Number.isFinite(n) ? clampVol(n) : DEFAULT_VOL;
+}
+
+function setVolume(n, persist) {
+  const v = clampVol(n);
+  audio.volume = v;
+  audio.muted = v === 0;
+  $("volume").value = String(v);
+  $("btn-mute").textContent = v === 0 ? "×" : "♪";
+  $("btn-mute").setAttribute("aria-label", v === 0 ? "Unmute" : "Mute");
+  if (persist !== false) localStorage.setItem(VOL_KEY, String(v));
+}
+
+let lastAudible = DEFAULT_VOL;
 let playlist = [];
 let currentIndex = -1;
 
+function languageFrom(text) {
+  if (/日语/.test(text)) return "JP";
+  if (/英语/.test(text)) return "EN";
+  if (/国语/.test(text) || /国服/.test(text)) return "CN";
+  if (/日服主题曲/.test(text)) return "JP";
+  if (/权御天下|冠世一战/.test(text)) return "CN";
+  if (/达拉崩吧/.test(text)) return "CN";
+  return null;
+}
+
+function serverFrom(text) {
+  if (text.includes("欧美")) return "EN";
+  if (text.includes("日本")) return "JP";
+  if (text.includes("港澳台")) return "TW";
+  if (text.includes("大陆")) return "CN";
+  return null;
+}
+
 function regionFrom(text) {
-  if (/欧美|英语/.test(text)) return "EN";
-  if (/日本|日语/.test(text)) return "JP";
-  if (/港澳台/.test(text)) return "TW";
-  if (/大陆|国语/.test(text)) return "CN";
+  const language = languageFrom(text);
+  if (language) return language;
+  if (/音浪|音乐大厅/.test(text)) return serverFrom(text);
   return null;
 }
 
@@ -276,6 +317,24 @@ seek.addEventListener("input", () => {
   audio.currentTime = Number(seek.value);
 });
 
+const volumeEl = $("volume");
+setVolume(readSavedVol());
+lastAudible = audio.volume || DEFAULT_VOL;
+
+volumeEl.addEventListener("input", () => {
+  const v = Number(volumeEl.value);
+  if (v > 0) lastAudible = v;
+  setVolume(v);
+});
+
+$("btn-mute").addEventListener("click", () => {
+  if (audio.volume === 0) setVolume(lastAudible || DEFAULT_VOL);
+  else {
+    lastAudible = audio.volume || lastAudible;
+    setVolume(0);
+  }
+});
+
 document.addEventListener("keydown", (e) => {
   if (e.target.matches("input, textarea, button")) return;
   if (e.code === "Space") {
@@ -283,6 +342,15 @@ document.addEventListener("keydown", (e) => {
     $("btn-play").click();
   } else if (e.code === "ArrowRight") step(1);
   else if (e.code === "ArrowLeft") step(-1);
+  else if (e.code === "ArrowUp") {
+    e.preventDefault();
+    setVolume(audio.volume + 0.05);
+    if (audio.volume > 0) lastAudible = audio.volume;
+  } else if (e.code === "ArrowDown") {
+    e.preventDefault();
+    setVolume(audio.volume - 0.05);
+    if (audio.volume > 0) lastAudible = audio.volume;
+  }
 });
 
 const rows = Array.isArray(window.TRACKS) ? window.TRACKS : [];
