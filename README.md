@@ -2,7 +2,7 @@
 
 An unofficial fan playlist of the in-game music from **Sword x Staff**.
 
-Open [the playlist](https://mystonats.github.io/sxs_music/) (GitHub Pages) or run it locally:
+This repository is private. GitHub Pages is not enabled on the current plan, so open the playlist locally:
 
 ```bash
 python3 -m http.server
