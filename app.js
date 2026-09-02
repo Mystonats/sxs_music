@@ -1,51 +1,63 @@
-const KINGDOM_ORDER = [
-  "Verdantglade",
-  "Cinder Ridge",
-  "Aqualis",
-  "Loong Haven",
-  "Aethyris",
-  "Acme Nexus",
-  "Whaleback",
-  "Originisle",
-  "Cosmic Voyage",
-  "Whimsy World",
-];
-
-const EN_BY_ZH = {
-  双旦奇境: "Twin Holidays",
-  千霄之迹: "Traces Across the Sky",
-  达拉崩吧: "Da La Beng Ba",
-  杖之歌: "Song of the Staff",
-  剑之歌: "Song of the Sword",
-  权御天下: "The Emperor's Arrival",
-  冠世一战: "Battle of a Generation",
-  大君岛: "Daikun Island",
-  "音乐大厅(音浪)": "Concert Hall — Soundwave",
-  "音乐大厅(洛天依)": "Concert Hall — Luo Tianyi",
-  音浪音乐节: "Soundwave Music Festival",
-  解谜活动地图场景音乐: "Puzzle Event",
-};
-
 const SECTIONS = [
   {
     id: "kingdoms",
     title: "Kingdoms of Kanstein",
     blurb: "Map themes for the realms — looping the way they do in the world.",
+    open: true,
   },
   {
     id: "concert",
     title: "Luo Tianyi concert",
     blurb: "Concert-hall theme and the Luo Tianyi set: Da La Beng Ba, the Staff and Sword songs, and more.",
+    open: true,
   },
   {
     id: "festival",
     title: "Music festival",
     blurb: "Soundwave hall and festival arrangements across regions.",
+    open: true,
   },
   {
     id: "seasonal",
     title: "Seasonal",
     blurb: "Holiday nights, New Year skies, and the puzzle-map air.",
+    open: true,
+  },
+  {
+    id: "events",
+    title: "Events",
+    blurb: "Festival, collab, and limited-time themes.",
+    open: false,
+  },
+  {
+    id: "battle",
+    title: "Battle",
+    blurb: "Combat themes in numbered sets. These files have no song titles — only which set they belong to.",
+    open: false,
+  },
+  {
+    id: "seasons",
+    title: "Season themes",
+    blurb: "Extra Season 4 and Season 5 music. Untitled besides the season.",
+    open: false,
+  },
+  {
+    id: "interface",
+    title: "Menus",
+    blurb: "Interface themes without a listed title.",
+    open: false,
+  },
+  {
+    id: "home",
+    title: "Home",
+    blurb: "The homestead theme.",
+    open: false,
+  },
+  {
+    id: "fashion",
+    title: "Fashion",
+    blurb: "Outfit-event themes.",
+    open: false,
   },
 ];
 
@@ -58,6 +70,7 @@ const catalogEl = $("catalog");
 const seek = $("seek");
 const loopToggle = $("mode-loop");
 const throughToggle = $("mode-through");
+const findEl = $("find");
 
 const VOL_KEY = "sxs-volume";
 const DEFAULT_VOL = 0.55;
@@ -85,148 +98,109 @@ function setVolume(n, persist) {
 let lastAudible = DEFAULT_VOL;
 let playlist = [];
 let currentIndex = -1;
+const ALL = Array.isArray(window.TRACKS) ? window.TRACKS : [];
 
-function languageFrom(text) {
-  if (/日语/.test(text)) return "JP";
-  if (/英语/.test(text)) return "EN";
-  if (/国语/.test(text) || /国服/.test(text)) return "CN";
-  if (/日服主题曲/.test(text)) return "JP";
-  if (/权御天下|冠世一战/.test(text)) return "CN";
-  if (/达拉崩吧/.test(text)) return "CN";
-  return null;
+function audioUrl(path) {
+  return path.split("/").map(encodeURIComponent).join("/");
 }
 
-function serverFrom(text) {
-  if (text.includes("欧美")) return "EN";
-  if (text.includes("日本")) return "JP";
-  if (text.includes("港澳台")) return "TW";
-  if (text.includes("大陆")) return "CN";
-  return null;
+function haystack(track) {
+  return `${track.name} ${track.zh} ${track.group} ${track.section}`.toLowerCase();
 }
 
-function regionFrom(text) {
-  const language = languageFrom(text);
-  if (language) return language;
-  if (/音浪|音乐大厅/.test(text)) return serverFrom(text);
-  return null;
+function matches(track, q) {
+  if (!q) return true;
+  return haystack(track).includes(q);
 }
 
-function songFrom(text) {
-  const inner = text.match(/[（(]([^）)]+)[）)]/);
-  if (inner && /杖之歌|剑之歌/.test(inner[1])) {
-    return inner[1].split(/[·・]/)[0].trim();
-  }
-  for (const name of ["达拉崩吧", "权御天下", "冠世一战", "杖之歌", "剑之歌"]) {
-    if (text.includes(name)) return name;
-  }
-  return null;
+function trackButton(track, index) {
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "track";
+  btn.dataset.index = String(index);
+  btn.innerHTML = `
+    <span class="cue" aria-hidden="true">▶</span>
+    <span class="names">
+      <p class="name">${escapeHtml(track.name)}</p>
+      ${track.zh ? `<p class="zh">${escapeHtml(track.zh)}</p>` : ""}
+    </span>
+    <span class="badges">${(track.badges || []).map((b) =>
+      `<span class="badge ${b.kind || ""}">${escapeHtml(b.text)}</span>`
+    ).join("")}</span>`;
+  btn.addEventListener("click", () => playAt(index, true));
+  return btn;
 }
 
-function hallName(text) {
-  if (text.includes("音乐大厅") && text.includes("音浪")) return "音乐大厅(音浪)";
-  if (text.includes("音乐大厅") && text.includes("洛天依")) return "音乐大厅(洛天依)";
-  if (text.includes("音浪音乐节")) return "音浪音乐节";
-  return null;
-}
-
-function classify(track) {
-  if (track.bgmId === 99) return null;
-  if (track.map || track.bgmId === 91) return "kingdoms";
-  const blob = `${track.title} ${track.memoZh || ""}`;
-  if (
-    /洛天依|达拉崩吧|杖之歌|剑之歌|权御天下|冠世一战/.test(blob)
-  ) {
-    return "concert";
-  }
-  if (blob.includes("音浪")) return "festival";
-  return "seasonal";
-}
-
-function present(track) {
-  const blob = `${track.title} ${track.memoZh || ""}`;
-  const song = songFrom(blob);
-  const hall = hallName(blob);
-  const zhCore = song || hall || (track.memoZh || track.title)
-    .replace(/\s*-\s*公测版/g, "")
-    .replace(/\s*-\s*(日本|欧美|港澳台|大陆)\s*/g, "")
-    .replace(/\s{2,}/g, " ")
-    .trim();
-
-  const badges = [];
-  const region = regionFrom(blob);
-  if (region) badges.push({ text: region, kind: "region" });
-  if (/伴奏/.test(blob)) badges.push({ text: "Instrumental", kind: "" });
-  if (track.map === "Whimsy World") badges.push({ text: "Unreleased", kind: "unreleased" });
-  if (track.map === "Whimsy World") badges.push({ text: "Harpadia", kind: "" });
-
-  let name;
-  let zh;
-  if (track.map) {
-    name = track.map;
-    zh = track.memoZh || "";
-  } else if (track.bgmId === 91) {
-    name = "Daikun Island";
-    zh = "大君岛";
-  } else {
-    name = EN_BY_ZH[zhCore] || EN_BY_ZH[song] || track.title;
-    zh = song || hall || zhCore;
-  }
-
-  return {
-    ...track,
-    section: classify(track),
-    name,
-    zh,
-    badges,
-    src: "audio/" + encodeURIComponent(track.file) + ".ogg",
-  };
-}
-
-function sortKingdoms(tracks) {
-  const rank = new Map(KINGDOM_ORDER.map((m, i) => [m, i]));
-  return tracks.slice().sort((a, b) => {
-    const ra = a.map ? rank.get(a.map) : KINGDOM_ORDER.length;
-    const rb = b.map ? rank.get(b.map) : KINGDOM_ORDER.length;
-    const da = ra === undefined ? KINGDOM_ORDER.length : ra;
-    const db = rb === undefined ? KINGDOM_ORDER.length : rb;
-    return da - db || a.bgmId - b.bgmId;
-  });
-}
-
-function render(tracks) {
+function render(query) {
+  const q = (query || "").trim().toLowerCase();
   catalogEl.innerHTML = "";
   playlist = [];
+  let shown = 0;
 
   for (const section of SECTIONS) {
-    let items = tracks.filter((t) => t.section === section.id);
-    if (section.id === "kingdoms") items = sortKingdoms(items);
+    const items = ALL.filter((t) => t.section === section.id && matches(t, q))
+      .slice()
+      .sort((a, b) => (a.group || "").localeCompare(b.group || "") || (a.sort || 0) - (b.sort || 0) || a.name.localeCompare(b.name));
     if (!items.length) continue;
+    shown += items.length;
 
-    const wrap = document.createElement("section");
+    const wrap = document.createElement("details");
     wrap.className = "section";
     wrap.id = section.id;
-    wrap.innerHTML = `<h2>${section.title}</h2><p class="blurb">${section.blurb}</p>`;
+    wrap.open = Boolean(q) || section.open;
 
+    const summary = document.createElement("summary");
+    summary.innerHTML = `<h2>${section.title}</h2><span class="count">${items.length}</span>`;
+    wrap.appendChild(summary);
+    if (section.blurb) {
+      const blurb = document.createElement("p");
+      blurb.className = "blurb";
+      blurb.textContent = section.blurb;
+      wrap.appendChild(blurb);
+    }
+
+    const groups = [];
     for (const track of items) {
-      const index = playlist.push(track) - 1;
-      const btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "track";
-      btn.dataset.index = String(index);
-      btn.innerHTML = `
-        <span class="cue" aria-hidden="true">▶</span>
-        <span class="names">
-          <p class="name">${escapeHtml(track.name)}</p>
-          ${track.zh && track.zh !== track.name ? `<p class="zh">${escapeHtml(track.zh)}</p>` : ""}
-        </span>
-        <span class="badges">${track.badges.map((b) =>
-          `<span class="badge ${b.kind}">${escapeHtml(b.text)}</span>`
-        ).join("")}</span>`;
-      btn.addEventListener("click", () => playAt(index, true));
-      wrap.appendChild(btn);
+      const g = track.group || "";
+      if (!groups.length || groups[groups.length - 1].name !== g) {
+        groups.push({ name: g, tracks: [] });
+      }
+      groups[groups.length - 1].tracks.push(track);
+    }
+
+    for (const group of groups) {
+      let host = wrap;
+      if (group.name && groups.length > 1) {
+        const nest = document.createElement("details");
+        nest.className = "group";
+        nest.open = Boolean(q) || groups.length <= 8;
+        nest.innerHTML = `<summary>${escapeHtml(group.name)} <span class="count">${group.tracks.length}</span></summary>`;
+        wrap.appendChild(nest);
+        host = nest;
+      } else if (group.name && groups.length === 1) {
+        const label = document.createElement("p");
+        label.className = "group-label";
+        label.textContent = group.name;
+        wrap.appendChild(label);
+      }
+      for (const track of group.tracks) {
+        const index = playlist.push(track) - 1;
+        host.appendChild(trackButton(track, index));
+      }
     }
     catalogEl.appendChild(wrap);
   }
+
+  if (statusEl) {
+    if (!shown) {
+      statusEl.hidden = false;
+      statusEl.textContent = "No tracks match that search.";
+      catalogEl.appendChild(statusEl);
+    } else {
+      statusEl.remove();
+    }
+  }
+  paintCurrent();
 }
 
 function escapeHtml(s) {
@@ -254,10 +228,10 @@ function playAt(index, autoplay) {
   const track = playlist[index];
   if (!track) return;
   currentIndex = index;
-  audio.src = track.src;
+  audio.src = audioUrl(track.path);
   playerEl.hidden = false;
   $("player-title").textContent = track.name;
-  $("player-sub").textContent = track.zh && track.zh !== track.name ? track.zh : "";
+  $("player-sub").textContent = track.zh || track.group || "";
   $("player-kicker").textContent = SECTIONS.find((s) => s.id === track.section)?.title || "Now playing";
   paintCurrent();
   applyLoopMode();
@@ -277,10 +251,20 @@ function paintCurrent() {
   $("btn-play").setAttribute("aria-label", audio.paused ? "Play" : "Pause");
 }
 
+function sectionSlice() {
+  const cur = playlist[currentIndex];
+  if (!cur) return playlist;
+  return playlist
+    .map((t, i) => ({ t, i }))
+    .filter((x) => x.t.section === cur.section);
+}
+
 function step(delta) {
-  if (!playlist.length) return;
-  const next = (currentIndex + delta + playlist.length) % playlist.length;
-  playAt(next, true);
+  const slice = sectionSlice();
+  if (!slice.length) return;
+  const here = slice.findIndex((x) => x.i === currentIndex);
+  const next = slice[(here + delta + slice.length) % slice.length];
+  playAt(next.i, true);
 }
 
 loopToggle.addEventListener("change", () => {
@@ -353,10 +337,17 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-const rows = Array.isArray(window.TRACKS) ? window.TRACKS : [];
-if (!rows.length) {
+findEl.addEventListener("input", () => render(findEl.value));
+
+document.querySelector(".jump").addEventListener("click", (e) => {
+  const a = e.target.closest("a[href^='#']");
+  if (!a) return;
+  const el = document.querySelector(a.getAttribute("href"));
+  if (el && el.tagName === "DETAILS") el.open = true;
+});
+
+if (!ALL.length) {
   statusEl.textContent = "Playlist catalog is missing.";
 } else {
-  render(rows.map(present).filter((t) => t.section));
-  statusEl.remove();
+  render("");
 }

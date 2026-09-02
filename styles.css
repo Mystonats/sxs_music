@@ -111,6 +111,39 @@ body {
   color: var(--teal);
 }
 
+.find {
+  display: block;
+  margin-top: 1.4rem;
+}
+
+.find input {
+  width: 100%;
+  max-width: 28rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--ivory);
+  font: inherit;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+}
+
+.find input::placeholder {
+  color: var(--faint);
+}
+
+.find input:focus {
+  outline: 1px solid var(--teal);
+  border-color: var(--teal);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
 .status {
   color: var(--muted);
   padding: 2rem 0;
@@ -121,18 +154,59 @@ body {
   scroll-margin-top: 1.25rem;
 }
 
+.section > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.section > summary::-webkit-details-marker { display: none; }
+
 .section h2 {
-  margin: 0 0 0.35rem;
+  margin: 0;
   font-family: var(--serif);
   font-size: 1.85rem;
   font-weight: 600;
   color: var(--gold);
 }
 
+.count {
+  font-size: 0.78rem;
+  color: var(--faint);
+  letter-spacing: 0.04em;
+}
+
 .section .blurb {
-  margin: 0 0 1.1rem;
+  margin: 0.35rem 0 1.1rem;
   color: var(--faint);
   font-size: 0.95rem;
+}
+
+.group {
+  margin: 0.4rem 0 0.8rem;
+}
+
+.group > summary {
+  list-style: none;
+  cursor: pointer;
+  color: var(--gold);
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  padding: 0.45rem 0;
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.group > summary::-webkit-details-marker { display: none; }
+
+.group-label {
+  margin: 0.8rem 0 0.2rem;
+  color: var(--gold);
+  font-family: var(--serif);
+  font-size: 1.15rem;
 }
 
 .track {
