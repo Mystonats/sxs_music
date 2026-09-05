@@ -161,7 +161,7 @@ window.TRACKS = [
  {
   "name": "Aethyris",
   "zh": "羽之国",
-  "path": "audio/Map_BGM_02__bgm17_Aethyris__466214220.ogg",
+  "path": "audio/Map_BGM_02__bgm17_Aethyris__378616789.ogg",
   "section": "kingdoms",
   "group": "",
   "badges": [],
@@ -365,7 +365,7 @@ window.TRACKS = [
  {
   "name": "Whimsy World",
   "zh": "哈帕迪",
-  "path": "audio/Version_004_Season_04_BGM__bgm19_Whimsy_World__884949568.ogg",
+  "path": "audio/Version_004_Season_04_BGM__bgm19_Whimsy_World__793530457.ogg",
   "section": "kingdoms",
   "group": "",
   "badges": [
@@ -2085,5 +2085,131 @@ window.TRACKS = [
   "group": "Season 5",
   "badges": [],
   "sort": 10
+ },
+ {
+  "name": "Battle Interlude",
+  "zh": "",
+  "path": "audio/extra/Battle_ME_00/Battle_ME_00__619010748.ogg",
+  "section": "battle",
+  "group": "Battle Interlude",
+  "badges": [],
+  "sort": 1
+ },
+ {
+  "name": "Theme 1",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__24969107.ogg",
+  "section": "interface",
+  "group": "Core",
+  "badges": [],
+  "sort": 1
+ },
+ {
+  "name": "Theme 2",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__102287030.ogg",
+  "section": "interface",
+  "group": "Core",
+  "badges": [],
+  "sort": 2
+ },
+ {
+  "name": "Theme 3",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__139339264.ogg",
+  "section": "interface",
+  "group": "Core",
+  "badges": [],
+  "sort": 3
+ },
+ {
+  "name": "Theme 4",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__157815238.ogg",
+  "section": "interface",
+  "group": "Core",
+  "badges": [],
+  "sort": 4
+ },
+ {
+  "name": "Theme 5",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__199624494.ogg",
+  "section": "interface",
+  "group": "Core",
+  "badges": [],
+  "sort": 5
+ },
+ {
+  "name": "Theme 6",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__264867527.ogg",
+  "section": "interface",
+  "group": "Core",
+  "badges": [],
+  "sort": 6
+ },
+ {
+  "name": "Theme 7",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__335120171.ogg",
+  "section": "interface",
+  "group": "Core",
+  "badges": [],
+  "sort": 7
+ },
+ {
+  "name": "Theme 8",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__390789885.ogg",
+  "section": "interface",
+  "group": "Core",
+  "badges": [],
+  "sort": 8
+ },
+ {
+  "name": "Theme 9",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__687165149.ogg",
+  "section": "interface",
+  "group": "Core",
+  "badges": [],
+  "sort": 9
+ },
+ {
+  "name": "Theme 10",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__798233325.ogg",
+  "section": "interface",
+  "group": "Core",
+  "badges": [],
+  "sort": 10
+ },
+ {
+  "name": "Theme 11",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__818011332.ogg",
+  "section": "interface",
+  "group": "Core",
+  "badges": [],
+  "sort": 11
+ },
+ {
+  "name": "Theme 12",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__934933282.ogg",
+  "section": "interface",
+  "group": "Core",
+  "badges": [],
+  "sort": 12
+ },
+ {
+  "name": "Theme 24",
+  "zh": "",
+  "path": "audio/extra/UI_BGM_02/UI_BGM_02__747847100.ogg",
+  "section": "interface",
+  "group": "Menus II",
+  "badges": [],
+  "sort": 24
  }
 ];

@@ -165,15 +165,15 @@
   "sourceBytes": 1653584
  },
  {
-  "file": "Map_BGM_02__bgm17_Aethyris__466214220",
+  "file": "Map_BGM_02__bgm17_Aethyris__378616789",
   "title": "Aethyris",
   "map": "Aethyris",
   "memoZh": "羽之国",
   "bgmId": 17,
   "event": "Map_17_Play",
   "package": "Map_BGM_02",
-  "wemId": 466214220,
-  "sourceBytes": 1403517
+  "wemId": 378616789,
+  "sourceBytes": 1525235
  },
  {
   "file": "Map_BGM_02__bgm18_Cosmic_Voyage__795962407",
@@ -341,14 +341,14 @@
   "sourceBytes": 5051046
  },
  {
-  "file": "Version_004_Season_04_BGM__bgm19_Whimsy_World__884949568",
+  "file": "Version_004_Season_04_BGM__bgm19_Whimsy_World__793530457",
   "title": "Whimsy World",
   "map": "Whimsy World",
   "memoZh": "哈帕迪",
   "bgmId": 19,
   "event": "Map_19_Play",
   "package": "Version_004_Season_04_BGM",
-  "wemId": 884949568,
-  "sourceBytes": 1753603
+  "wemId": 793530457,
+  "sourceBytes": 1742296
  }
 ]

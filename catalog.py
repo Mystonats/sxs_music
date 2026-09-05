@@ -10,6 +10,15 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 OLD = json.loads((ROOT / "tracks.json").read_text(encoding="utf-8"))
 TW = json.loads((ROOT / "tw-tracks.json").read_text(encoding="utf-8"))
+# Global-client banks the TW sweep never covered. Same shape as TW, but the
+# files live under audio/extra/ rather than audio/tw/.
+_extra = ROOT / "extra-tracks.json"
+EXTRA = json.loads(_extra.read_text(encoding="utf-8")) if _extra.exists() else []
+for _t in TW:
+    _t.setdefault("_base", "audio/tw")
+for _t in EXTRA:
+    _t.setdefault("_base", "audio/extra")
+LIBRARY = TW + EXTRA
 
 KINGDOM_ORDER = [
     "Verdantglade",
@@ -77,6 +86,8 @@ PACK_LABELS = {
     "Battle_BGM_05": "Set VI",
     "Battle_BGM_06": "Set VII",
     "Battle_BGM_Public": "Shared",
+    "Battle_ME_00": "Battle Interlude",
+    "Minimum": "Core",
     "Fashion_01_RadioWaves": "Radio Waves",
     "Fashion_02_MagicLamp": "Magic Lamp",
     "Home_BGM_01": "Home",
@@ -198,6 +209,9 @@ def present_named(title: str, memo: str, map_name: str | None, bgm_id, extra_bad
 def pack_section(pack: str) -> str | None:
     if pack.startswith("Voice_"):
         return None
+    if pack == "Minimum":
+        # the always-loaded bank: title, login and core UI music
+        return "interface"
     if pack.startswith("Battle_") or pack.startswith("System_"):
         return "battle"
     if pack.startswith("Activity_"):
@@ -237,7 +251,7 @@ def main() -> None:
     old_titles = {t.get("title") for t in OLD if t.get("title")} | set(KINGDOM_ORDER)
 
     untitled_total = defaultdict(int)
-    for t in TW:
+    for t in LIBRARY:
         if t.get("title") or t["pack"].startswith("Voice_"):
             continue
         untitled_total[t["pack"]] += 1
@@ -251,11 +265,11 @@ def main() -> None:
         out.append(rec(name, zh, f"audio/{t['file']}.ogg", section, "", badges, sort))
 
     untitled_index = defaultdict(int)
-    for t in TW:
+    for t in LIBRARY:
         pack = t["pack"]
         title = t.get("title")
         wem = t["wemId"]
-        path = f"audio/tw/{t['file']}.ogg"
+        path = f"{t['_base']}/{t['file']}.ogg"
         if pack.startswith("Voice_"):
             continue
         if title:
