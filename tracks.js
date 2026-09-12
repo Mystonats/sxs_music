@@ -2087,6 +2087,15 @@ window.TRACKS = [
   "sort": 10
  },
  {
+  "name": "Thunderous Crusade",
+  "zh": "神谕之战",
+  "path": "audio/extra/Activity_029_GodsAtWars/Activity_029_GodsAtWars__611582703.ogg",
+  "section": "events",
+  "group": "",
+  "badges": [],
+  "sort": 0
+ },
+ {
   "name": "Battle Interlude",
   "zh": "",
   "path": "audio/extra/Battle_ME_00/Battle_ME_00__619010748.ogg",
@@ -2096,112 +2105,139 @@ window.TRACKS = [
   "sort": 1
  },
  {
-  "name": "Theme 1",
+  "name": "Goldfish",
+  "zh": "金鱼瞬华",
+  "path": "audio/extra/Fashion_03_Goldfish/Fashion_03_Goldfish__28205945.ogg",
+  "section": "fashion",
+  "group": "",
+  "badges": [],
+  "sort": 0
+ },
+ {
+  "name": "Default",
   "zh": "",
-  "path": "audio/extra/Minimum/Minimum__24969107.ogg",
+  "path": "audio/extra/Minimum/Minimum__139339264.ogg",
   "section": "interface",
-  "group": "Core",
+  "group": "Login Screen",
   "badges": [],
   "sort": 1
  },
  {
-  "name": "Theme 2",
+  "name": "Season 3",
   "zh": "",
   "path": "audio/extra/Minimum/Minimum__102287030.ogg",
   "section": "interface",
-  "group": "Core",
-  "badges": [],
-  "sort": 2
- },
- {
-  "name": "Theme 3",
-  "zh": "",
-  "path": "audio/extra/Minimum/Minimum__139339264.ogg",
-  "section": "interface",
-  "group": "Core",
-  "badges": [],
-  "sort": 3
- },
- {
-  "name": "Theme 4",
-  "zh": "",
-  "path": "audio/extra/Minimum/Minimum__157815238.ogg",
-  "section": "interface",
-  "group": "Core",
-  "badges": [],
-  "sort": 4
- },
- {
-  "name": "Theme 5",
-  "zh": "",
-  "path": "audio/extra/Minimum/Minimum__199624494.ogg",
-  "section": "interface",
-  "group": "Core",
+  "group": "Login Screen",
   "badges": [],
   "sort": 5
  },
  {
-  "name": "Theme 6",
+  "name": "Celebration",
   "zh": "",
   "path": "audio/extra/Minimum/Minimum__264867527.ogg",
   "section": "interface",
-  "group": "Core",
-  "badges": [],
-  "sort": 6
- },
- {
-  "name": "Theme 7",
-  "zh": "",
-  "path": "audio/extra/Minimum/Minimum__335120171.ogg",
-  "section": "interface",
-  "group": "Core",
-  "badges": [],
-  "sort": 7
- },
- {
-  "name": "Theme 8",
-  "zh": "",
-  "path": "audio/extra/Minimum/Minimum__390789885.ogg",
-  "section": "interface",
-  "group": "Core",
+  "group": "Login Screen",
   "badges": [],
   "sort": 8
  },
  {
-  "name": "Theme 9",
+  "name": "Season 4",
   "zh": "",
-  "path": "audio/extra/Minimum/Minimum__687165149.ogg",
+  "path": "audio/extra/Minimum/Minimum__934933282.ogg",
   "section": "interface",
-  "group": "Core",
+  "group": "Login Screen",
   "badges": [],
   "sort": 9
  },
  {
-  "name": "Theme 10",
+  "name": "Christmas",
   "zh": "",
-  "path": "audio/extra/Minimum/Minimum__798233325.ogg",
+  "path": "audio/extra/Minimum/Minimum__390789885.ogg",
   "section": "interface",
-  "group": "Core",
+  "group": "Login Screen",
   "badges": [],
   "sort": 10
  },
  {
-  "name": "Theme 11",
+  "name": "Spring Festival",
   "zh": "",
   "path": "audio/extra/Minimum/Minimum__818011332.ogg",
   "section": "interface",
-  "group": "Core",
+  "group": "Login Screen",
   "badges": [],
   "sort": 11
  },
  {
-  "name": "Theme 12",
+  "name": "Season 5",
   "zh": "",
-  "path": "audio/extra/Minimum/Minimum__934933282.ogg",
+  "path": "audio/extra/Minimum/Minimum__157815238.ogg",
   "section": "interface",
-  "group": "Core",
+  "group": "Login Screen",
   "badges": [],
-  "sort": 12
+  "sort": 13
+ },
+ {
+  "name": "May Day",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__24969107.ogg",
+  "section": "interface",
+  "group": "Login Screen",
+  "badges": [],
+  "sort": 14
+ },
+ {
+  "name": "1st Anniversary",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__687165149.ogg",
+  "section": "interface",
+  "group": "Login Screen",
+  "badges": [],
+  "sort": 15
+ },
+ {
+  "name": "World Cup",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__798233325.ogg",
+  "section": "interface",
+  "group": "Login Screen",
+  "badges": [],
+  "sort": 16
+ },
+ {
+  "name": "Slime",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__199624494.ogg",
+  "section": "interface",
+  "group": "Login Screen",
+  "badges": [],
+  "sort": 17
+ },
+ {
+  "name": "Luo Tianyi (Global)",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__335120171.ogg",
+  "section": "interface",
+  "group": "Login Screen",
+  "badges": [],
+  "sort": 19
+ },
+ {
+  "name": "Bocchi the Rock!",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__134549297.ogg",
+  "section": "interface",
+  "group": "Login Screen",
+  "badges": [],
+  "sort": 22
+ },
+ {
+  "name": "Thunderous Crusade",
+  "zh": "神谕之战",
+  "path": "audio/extra/Minimum/Minimum__547027138.ogg",
+  "section": "interface",
+  "group": "Login Screen",
+  "badges": [],
+  "sort": 23
  },
  {
   "name": "Theme 24",
@@ -2211,5 +2247,14 @@ window.TRACKS = [
   "group": "Menus II",
   "badges": [],
   "sort": 24
+ },
+ {
+  "name": "Season 6 Preview",
+  "zh": "第六赛季",
+  "path": "audio/extra/Version_006_Season_06_preview/Version_006_Season_06_preview__136821200.ogg",
+  "section": "seasons",
+  "group": "",
+  "badges": [],
+  "sort": 0
  }
 ];

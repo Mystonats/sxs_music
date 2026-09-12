@@ -1,5 +1,16 @@
 [
  {
+  "pack": "Activity_029_GodsAtWars",
+  "wemId": 611582703,
+  "title": null,
+  "file": "Activity_029_GodsAtWars/Activity_029_GodsAtWars__611582703",
+  "bytes": 1081347,
+  "name": "Thunderous Crusade",
+  "zh": "神谕之战",
+  "section": "events",
+  "event": "BGM_godsatwars_Main_Play"
+ },
+ {
   "pack": "Battle_ME_00",
   "wemId": 619010748,
   "title": null,
@@ -7,88 +18,184 @@
   "bytes": 1272485
  },
  {
-  "pack": "Minimum",
-  "wemId": 24969107,
+  "pack": "Fashion_03_Goldfish",
+  "wemId": 28205945,
   "title": null,
-  "file": "Minimum/Minimum__24969107",
-  "bytes": 1070205
- },
- {
-  "pack": "Minimum",
-  "wemId": 102287030,
-  "title": null,
-  "file": "Minimum/Minimum__102287030",
-  "bytes": 1069728
+  "file": "Fashion_03_Goldfish/Fashion_03_Goldfish__28205945",
+  "bytes": 548893,
+  "name": "Goldfish",
+  "zh": "金鱼瞬华",
+  "section": "fashion",
+  "event": "bgm_Fashion_GoldFish_Play"
  },
  {
   "pack": "Minimum",
   "wemId": 139339264,
   "title": null,
   "file": "Minimum/Minimum__139339264",
-  "bytes": 1059025
+  "bytes": 1059025,
+  "name": "Default",
+  "section": "interface",
+  "group": "Login Screen",
+  "sort": 1,
+  "event": "Launch_01_Play"
  },
  {
   "pack": "Minimum",
-  "wemId": 157815238,
+  "wemId": 102287030,
   "title": null,
-  "file": "Minimum/Minimum__157815238",
-  "bytes": 1498609
- },
- {
-  "pack": "Minimum",
-  "wemId": 199624494,
-  "title": null,
-  "file": "Minimum/Minimum__199624494",
-  "bytes": 1056572
+  "file": "Minimum/Minimum__102287030",
+  "bytes": 1069728,
+  "name": "Season 3",
+  "section": "interface",
+  "group": "Login Screen",
+  "sort": 5,
+  "event": "Launch_05_Play"
  },
  {
   "pack": "Minimum",
   "wemId": 264867527,
   "title": null,
   "file": "Minimum/Minimum__264867527",
-  "bytes": 1701093
- },
- {
-  "pack": "Minimum",
-  "wemId": 335120171,
-  "title": null,
-  "file": "Minimum/Minimum__335120171",
-  "bytes": 3695583
- },
- {
-  "pack": "Minimum",
-  "wemId": 390789885,
-  "title": null,
-  "file": "Minimum/Minimum__390789885",
-  "bytes": 1829641
- },
- {
-  "pack": "Minimum",
-  "wemId": 687165149,
-  "title": null,
-  "file": "Minimum/Minimum__687165149",
-  "bytes": 1281235
- },
- {
-  "pack": "Minimum",
-  "wemId": 798233325,
-  "title": null,
-  "file": "Minimum/Minimum__798233325",
-  "bytes": 1101435
- },
- {
-  "pack": "Minimum",
-  "wemId": 818011332,
-  "title": null,
-  "file": "Minimum/Minimum__818011332",
-  "bytes": 1218491
+  "bytes": 1701093,
+  "name": "Celebration",
+  "section": "interface",
+  "group": "Login Screen",
+  "sort": 8,
+  "event": "Launch_08_Play"
  },
  {
   "pack": "Minimum",
   "wemId": 934933282,
   "title": null,
   "file": "Minimum/Minimum__934933282",
-  "bytes": 996158
+  "bytes": 996158,
+  "name": "Season 4",
+  "section": "interface",
+  "group": "Login Screen",
+  "sort": 9,
+  "event": "Launch_09_Play"
+ },
+ {
+  "pack": "Minimum",
+  "wemId": 390789885,
+  "title": null,
+  "file": "Minimum/Minimum__390789885",
+  "bytes": 1829641,
+  "name": "Christmas",
+  "section": "interface",
+  "group": "Login Screen",
+  "sort": 10,
+  "event": "Launch_10_Play"
+ },
+ {
+  "pack": "Minimum",
+  "wemId": 818011332,
+  "title": null,
+  "file": "Minimum/Minimum__818011332",
+  "bytes": 1218491,
+  "name": "Spring Festival",
+  "section": "interface",
+  "group": "Login Screen",
+  "sort": 11,
+  "event": "Launch_11_Play"
+ },
+ {
+  "pack": "Minimum",
+  "wemId": 157815238,
+  "title": null,
+  "file": "Minimum/Minimum__157815238",
+  "bytes": 1498609,
+  "name": "Season 5",
+  "section": "interface",
+  "group": "Login Screen",
+  "sort": 13,
+  "event": "Launch_13_Play"
+ },
+ {
+  "pack": "Minimum",
+  "wemId": 24969107,
+  "title": null,
+  "file": "Minimum/Minimum__24969107",
+  "bytes": 1070205,
+  "name": "May Day",
+  "section": "interface",
+  "group": "Login Screen",
+  "sort": 14,
+  "event": "Launch_14_Play"
+ },
+ {
+  "pack": "Minimum",
+  "wemId": 687165149,
+  "title": null,
+  "file": "Minimum/Minimum__687165149",
+  "bytes": 1281235,
+  "name": "1st Anniversary",
+  "section": "interface",
+  "group": "Login Screen",
+  "sort": 15,
+  "event": "Launch_15_Play"
+ },
+ {
+  "pack": "Minimum",
+  "wemId": 798233325,
+  "title": null,
+  "file": "Minimum/Minimum__798233325",
+  "bytes": 1101435,
+  "name": "World Cup",
+  "section": "interface",
+  "group": "Login Screen",
+  "sort": 16,
+  "event": "Launch_16_Play"
+ },
+ {
+  "pack": "Minimum",
+  "wemId": 199624494,
+  "title": null,
+  "file": "Minimum/Minimum__199624494",
+  "bytes": 1056572,
+  "name": "Slime",
+  "section": "interface",
+  "group": "Login Screen",
+  "sort": 17,
+  "event": "Launch_17_Play"
+ },
+ {
+  "pack": "Minimum",
+  "wemId": 335120171,
+  "title": null,
+  "file": "Minimum/Minimum__335120171",
+  "bytes": 3695583,
+  "name": "Luo Tianyi (Global)",
+  "section": "interface",
+  "group": "Login Screen",
+  "sort": 19,
+  "event": "Launch_19_Play"
+ },
+ {
+  "pack": "Minimum",
+  "wemId": 134549297,
+  "title": null,
+  "file": "Minimum/Minimum__134549297",
+  "bytes": 1397334,
+  "name": "Bocchi the Rock!",
+  "section": "interface",
+  "group": "Login Screen",
+  "sort": 22,
+  "event": "Launch_22_Play"
+ },
+ {
+  "pack": "Minimum",
+  "wemId": 547027138,
+  "title": null,
+  "file": "Minimum/Minimum__547027138",
+  "bytes": 1037281,
+  "name": "Thunderous Crusade",
+  "section": "interface",
+  "group": "Login Screen",
+  "sort": 23,
+  "event": "Launch_23_Play",
+  "zh": "神谕之战"
  },
  {
   "pack": "UI_BGM_02",
@@ -96,5 +203,15 @@
   "title": null,
   "file": "UI_BGM_02/UI_BGM_02__747847100",
   "bytes": 3699687
+ },
+ {
+  "pack": "Version_006_Season_06_preview",
+  "wemId": 136821200,
+  "title": null,
+  "file": "Version_006_Season_06_preview/Version_006_Season_06_preview__136821200",
+  "bytes": 1359871,
+  "name": "Season 6 Preview",
+  "zh": "第六赛季",
+  "section": "seasons"
  }
 ]

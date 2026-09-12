@@ -87,7 +87,7 @@ PACK_LABELS = {
     "Battle_BGM_06": "Set VII",
     "Battle_BGM_Public": "Shared",
     "Battle_ME_00": "Battle Interlude",
-    "Minimum": "Core",
+    "Minimum": "Login Screen",
     "Fashion_01_RadioWaves": "Radio Waves",
     "Fashion_02_MagicLamp": "Magic Lamp",
     "Home_BGM_01": "Home",
@@ -252,7 +252,7 @@ def main() -> None:
 
     untitled_total = defaultdict(int)
     for t in LIBRARY:
-        if t.get("title") or t["pack"].startswith("Voice_"):
+        if t.get("title") or t.get("name") or t["pack"].startswith("Voice_"):
             continue
         untitled_total[t["pack"]] += 1
 
@@ -271,6 +271,13 @@ def main() -> None:
         wem = t["wemId"]
         path = f"{t['_base']}/{t['file']}.ogg"
         if pack.startswith("Voice_"):
+            continue
+        if t.get("name"):
+            # Named from game data rather than bgm_event_key: login themes via
+            # theme.csv's Launch_NN events, activity banks via their event hash.
+            section = t.get("section") or pack_section(pack)
+            out.append(rec(t["name"], t.get("zh", ""), path, section,
+                           t.get("group", ""), [], t.get("sort", 0)))
             continue
         if title:
             if wem in old_wem or title in old_titles or title == "测试岛":

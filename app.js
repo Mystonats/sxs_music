@@ -38,13 +38,13 @@ const SECTIONS = [
   {
     id: "seasons",
     title: "Season themes",
-    blurb: "Extra Season 4 and Season 5 music. Untitled besides the season.",
+    blurb: "Extra Season 4 and Season 5 music, plus the Season 6 preview. Untitled besides the season.",
     open: false,
   },
   {
     id: "interface",
     title: "Menus",
-    blurb: "Interface themes without a listed title.",
+    blurb: "Login-screen themes, named by the event or season they launched with, plus untitled interface music.",
     open: false,
   },
   {
