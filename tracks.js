@@ -96,6 +96,20 @@ window.TRACKS = [
   "sort": 100
  },
  {
+  "name": "Dystopia 2",
+  "zh": "反乌托邦2",
+  "path": "audio/Activity_025_LuoTianYi_2_cn__bgm214_洛天依音乐节_-_反乌托邦2_-_大陆_-_公测版__902121378.ogg",
+  "section": "concert",
+  "group": "",
+  "badges": [
+   {
+    "text": "CN",
+    "kind": "region"
+   }
+  ],
+  "sort": 100
+ },
+ {
   "name": "Originisle",
   "zh": "初始岛",
   "path": "audio/Map_BGM_00__bgm10_Originisle__872303627.ogg",
@@ -1036,20 +1050,6 @@ window.TRACKS = [
   "group": "",
   "badges": [],
   "sort": 1
- },
- {
-  "name": "Dystopia 2",
-  "zh": "反乌托邦2",
-  "path": "audio/tw/Activity_025_LuoTianYi_2_cn/Activity_025_LuoTianYi_2_cn__洛天依音乐节_-_反乌托邦2_-_大陆_-_公测版__902121378.ogg",
-  "section": "concert",
-  "group": "",
-  "badges": [
-   {
-    "text": "CN",
-    "kind": "region"
-   }
-  ],
-  "sort": 100
  },
  {
   "name": "Theme 1",

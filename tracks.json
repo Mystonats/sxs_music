@@ -52,7 +52,7 @@
   "event": "bgm_LuoTianYi_live_dlbb_en_Play",
   "package": "Activity_024_LuoTianYi_en",
   "wemId": 134042390,
-  "sourceBytes": 3653049
+  "sourceBytes": 3580473
  },
  {
   "file": "Activity_024_LuoTianYi_en__bgm202_洛天依音乐节_-_日服主题曲_杖之歌_伴奏版_-_欧美_-_公测版__348044270",
@@ -75,6 +75,17 @@
   "package": "Activity_024_LuoTianYi_en",
   "wemId": 315281793,
   "sourceBytes": 3499122
+ },
+ {
+  "file": "Activity_025_LuoTianYi_2_cn__bgm214_洛天依音乐节_-_反乌托邦2_-_大陆_-_公测版__902121378",
+  "title": "洛天依音乐节 - 反乌托邦2 - 大陆 - 公测版",
+  "map": null,
+  "memoZh": "洛天依音乐节 - 反乌托邦2 - 大陆 - 公测版",
+  "bgmId": 214,
+  "event": "bgm_LuoTianYi_live_AntiUtopia_zh_Play",
+  "package": "Activity_025_LuoTianYi_2_cn",
+  "wemId": 902121378,
+  "sourceBytes": 3039825
  },
  {
   "file": "Map_BGM_00__bgm10_Originisle__872303627",
@@ -173,7 +184,7 @@
   "event": "Map_17_Play",
   "package": "Map_BGM_02",
   "wemId": 378616789,
-  "sourceBytes": 1525235
+  "sourceBytes": 1403517
  },
  {
   "file": "Map_BGM_02__bgm18_Cosmic_Voyage__795962407",
@@ -327,7 +338,7 @@
   "event": "LuoTianyi_04_Play",
   "package": "UI_BGM_02",
   "wemId": 261196757,
-  "sourceBytes": 4785483
+  "sourceBytes": 4422850
  },
  {
   "file": "UI_BGM_02__bgm205_洛天依音乐节_-_冠世一战_-_日本_-_公测版__85453220",
@@ -349,6 +360,6 @@
   "event": "Map_19_Play",
   "package": "Version_004_Season_04_BGM",
   "wemId": 793530457,
-  "sourceBytes": 1742296
+  "sourceBytes": 1753603
  }
 ]

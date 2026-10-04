@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build tracks.js from the original 32-track catalog plus the expanded library."""
+"""Build tracks.js from the named Global catalog plus the expanded library."""
 from __future__ import annotations
 
 import json
