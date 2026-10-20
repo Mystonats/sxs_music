@@ -18,7 +18,8 @@ for _t in TW:
     _t.setdefault("_base", "audio/tw")
 for _t in EXTRA:
     _t.setdefault("_base", "audio/extra")
-LIBRARY = TW + EXTRA
+overrides = {(t["pack"], t["wemId"]) for t in EXTRA}
+LIBRARY = [t for t in TW if (t["pack"], t["wemId"]) not in overrides] + EXTRA
 
 KINGDOM_ORDER = [
     "Verdantglade",
@@ -50,6 +51,10 @@ EN_BY_ZH = {
 }
 
 PACK_LABELS = {
+    "Activity_030_Nonhuman": "Nonhuman",
+    "Activity_032_Halloween2026": "Halloween 2026",
+    "Fashion_03_Duat": "Duat",
+    "Version_006_Season_06_BGM": "Season 6",
     "Activity_001_MoonFestival": "Moon Festival",
     "Activity_002_Halloween": "Halloween",
     "Activity_003_LuoXiaoHei": "Luo Xiaohei",
@@ -312,6 +317,11 @@ def main() -> None:
         else:
             name, zh = (label, "") if total == 1 else (f"{label} {n}", "")
         out.append(rec(name, zh, path, section, group, [], n))
+
+    staged = {f"{t['_base']}/{t['file']}.ogg" for t in LIBRARY if t.get("availability") == "Predownload"}
+    for track in out:
+        if track["path"] in staged:
+            track["badges"].append({"text": "Predownload", "kind": "unreleased"})
 
     (ROOT / "tracks.js").write_text(
         "window.TRACKS = " + json.dumps(out, ensure_ascii=False, indent=1) + ";\n",

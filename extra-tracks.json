@@ -213,5 +213,181 @@
   "name": "Season 6 Preview",
   "zh": "第六赛季",
   "section": "seasons"
+ },
+ {
+  "pack": "Activity_030_Nonhuman",
+  "wemId": 165284343,
+  "title": null,
+  "file": "Activity_030_Nonhuman/Activity_030_Nonhuman__165284343_127",
+  "bytes": 1207114,
+  "patch": "127_156560"
+ },
+ {
+  "pack": "Activity_030_Nonhuman",
+  "wemId": 923475959,
+  "title": null,
+  "file": "Activity_030_Nonhuman/Activity_030_Nonhuman__923475959_127",
+  "bytes": 1222580,
+  "patch": "127_156560"
+ },
+ {
+  "pack": "UI_BGM_02",
+  "wemId": 805737712,
+  "title": null,
+  "file": "UI_BGM_02/UI_BGM_02__805737712_127",
+  "bytes": 1265217,
+  "patch": "127_156560"
+ },
+ {
+  "pack": "Fashion_03_Duat",
+  "wemId": 568431050,
+  "title": null,
+  "file": "Fashion_03_Duat/Fashion_03_Duat__568431050_127",
+  "bytes": 783031,
+  "patch": "127_156560"
+ },
+ {
+  "pack": "Version_006_Season_06_BGM",
+  "wemId": 10733748,
+  "title": null,
+  "file": "Version_006_Season_06_BGM/Version_006_Season_06_BGM__10733748_127",
+  "bytes": 1225034,
+  "patch": "127_156560"
+ },
+ {
+  "pack": "Version_006_Season_06_BGM",
+  "wemId": 174301185,
+  "title": null,
+  "file": "Version_006_Season_06_BGM/Version_006_Season_06_BGM__174301185_127",
+  "bytes": 1162306,
+  "patch": "127_156560"
+ },
+ {
+  "pack": "Version_006_Season_06_BGM",
+  "wemId": 183555214,
+  "title": null,
+  "file": "Version_006_Season_06_BGM/Version_006_Season_06_BGM__183555214_127",
+  "bytes": 1137480,
+  "patch": "127_156560"
+ },
+ {
+  "pack": "Version_006_Season_06_BGM",
+  "wemId": 226840379,
+  "title": null,
+  "file": "Version_006_Season_06_BGM/Version_006_Season_06_BGM__226840379_127",
+  "bytes": 1120339,
+  "patch": "127_156560"
+ },
+ {
+  "pack": "Version_006_Season_06_BGM",
+  "wemId": 670133588,
+  "title": null,
+  "file": "Version_006_Season_06_BGM/Version_006_Season_06_BGM__670133588_127",
+  "bytes": 1511097,
+  "patch": "127_156560"
+ },
+ {
+  "pack": "Version_006_Season_06_BGM",
+  "wemId": 729171331,
+  "title": null,
+  "file": "Version_006_Season_06_BGM/Version_006_Season_06_BGM__729171331_127",
+  "bytes": 1442185,
+  "patch": "127_156560"
+ },
+ {
+  "pack": "Version_006_Season_06_BGM",
+  "wemId": 812006222,
+  "title": null,
+  "file": "Version_006_Season_06_BGM/Version_006_Season_06_BGM__812006222_127",
+  "bytes": 1394339,
+  "patch": "127_156560"
+ },
+ {
+  "pack": "Version_006_Season_06_BGM",
+  "wemId": 816326007,
+  "title": null,
+  "file": "Version_006_Season_06_BGM/Version_006_Season_06_BGM__816326007_127",
+  "bytes": 715939,
+  "patch": "127_156560"
+ },
+ {
+  "pack": "Version_006_Season_06_BGM",
+  "wemId": 978024474,
+  "title": null,
+  "file": "Version_006_Season_06_BGM/Version_006_Season_06_BGM__978024474_127",
+  "bytes": 1191575,
+  "patch": "127_156560"
+ },
+ {
+  "pack": "Activity_032_Halloween2026",
+  "wemId": 53327925,
+  "title": null,
+  "file": "Activity_032_Halloween2026/Activity_032_Halloween2026__53327925_127",
+  "bytes": 1657319,
+  "patch": "127_156560"
+ },
+ {
+  "pack": "Activity_032_Halloween2026",
+  "wemId": 57787947,
+  "title": null,
+  "file": "Activity_032_Halloween2026/Activity_032_Halloween2026__57787947_127",
+  "bytes": 2847558,
+  "patch": "127_156560"
+ },
+ {
+  "pack": "Activity_032_Halloween2026",
+  "wemId": 177711172,
+  "title": null,
+  "file": "Activity_032_Halloween2026/Activity_032_Halloween2026__177711172_127",
+  "bytes": 2778288,
+  "patch": "127_156560"
+ },
+ {
+  "pack": "Activity_032_Halloween2026",
+  "wemId": 274938206,
+  "title": null,
+  "file": "Activity_032_Halloween2026/Activity_032_Halloween2026__274938206_127",
+  "bytes": 1479248,
+  "patch": "127_156560"
+ },
+ {
+  "pack": "Activity_032_Halloween2026",
+  "wemId": 394526793,
+  "title": null,
+  "file": "Activity_032_Halloween2026/Activity_032_Halloween2026__394526793_127",
+  "bytes": 2693452,
+  "patch": "127_156560"
+ },
+ {
+  "pack": "Activity_032_Halloween2026",
+  "wemId": 645668751,
+  "title": null,
+  "file": "Activity_032_Halloween2026/Activity_032_Halloween2026__645668751_127",
+  "bytes": 2704011,
+  "patch": "127_156560"
+ },
+ {
+  "pack": "Activity_032_Halloween2026",
+  "wemId": 702013494,
+  "title": null,
+  "file": "Activity_032_Halloween2026/Activity_032_Halloween2026__702013494_127",
+  "bytes": 1625746,
+  "patch": "127_156560"
+ },
+ {
+  "pack": "Activity_032_Halloween2026",
+  "wemId": 790840730,
+  "title": null,
+  "file": "Activity_032_Halloween2026/Activity_032_Halloween2026__790840730_127",
+  "bytes": 1038167,
+  "patch": "127_156560"
+ },
+ {
+  "pack": "Activity_032_Halloween2026",
+  "wemId": 1051993446,
+  "title": null,
+  "file": "Activity_032_Halloween2026/Activity_032_Halloween2026__1051993446_127",
+  "bytes": 1190519,
+  "patch": "127_156560"
  }
 ]

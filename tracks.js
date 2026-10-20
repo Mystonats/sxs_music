@@ -1873,7 +1873,7 @@ window.TRACKS = [
  {
   "name": "Theme 17",
   "zh": "",
-  "path": "audio/tw/UI_BGM_02/UI_BGM_02__805737712.ogg",
+  "path": "audio/tw/UI_BGM_02/UI_BGM_02__815423149.ogg",
   "section": "interface",
   "group": "Menus II",
   "badges": [],
@@ -1882,7 +1882,7 @@ window.TRACKS = [
  {
   "name": "Theme 18",
   "zh": "",
-  "path": "audio/tw/UI_BGM_02/UI_BGM_02__815423149.ogg",
+  "path": "audio/tw/UI_BGM_02/UI_BGM_02__864317336.ogg",
   "section": "interface",
   "group": "Menus II",
   "badges": [],
@@ -1891,7 +1891,7 @@ window.TRACKS = [
  {
   "name": "Theme 19",
   "zh": "",
-  "path": "audio/tw/UI_BGM_02/UI_BGM_02__864317336.ogg",
+  "path": "audio/tw/UI_BGM_02/UI_BGM_02__868397822.ogg",
   "section": "interface",
   "group": "Menus II",
   "badges": [],
@@ -1900,7 +1900,7 @@ window.TRACKS = [
  {
   "name": "Theme 20",
   "zh": "",
-  "path": "audio/tw/UI_BGM_02/UI_BGM_02__868397822.ogg",
+  "path": "audio/tw/UI_BGM_02/UI_BGM_02__890627831.ogg",
   "section": "interface",
   "group": "Menus II",
   "badges": [],
@@ -1909,7 +1909,7 @@ window.TRACKS = [
  {
   "name": "Theme 21",
   "zh": "",
-  "path": "audio/tw/UI_BGM_02/UI_BGM_02__890627831.ogg",
+  "path": "audio/tw/UI_BGM_02/UI_BGM_02__923222544.ogg",
   "section": "interface",
   "group": "Menus II",
   "badges": [],
@@ -1918,20 +1918,11 @@ window.TRACKS = [
  {
   "name": "Theme 22",
   "zh": "",
-  "path": "audio/tw/UI_BGM_02/UI_BGM_02__923222544.ogg",
-  "section": "interface",
-  "group": "Menus II",
-  "badges": [],
-  "sort": 22
- },
- {
-  "name": "Theme 23",
-  "zh": "",
   "path": "audio/tw/UI_BGM_02/UI_BGM_02__1058147651.ogg",
   "section": "interface",
   "group": "Menus II",
   "badges": [],
-  "sort": 23
+  "sort": 22
  },
  {
   "name": "Theme 1",
@@ -2240,13 +2231,13 @@ window.TRACKS = [
   "sort": 23
  },
  {
-  "name": "Theme 24",
+  "name": "Theme 23",
   "zh": "",
   "path": "audio/extra/UI_BGM_02/UI_BGM_02__747847100.ogg",
   "section": "interface",
   "group": "Menus II",
   "badges": [],
-  "sort": 24
+  "sort": 23
  },
  {
   "name": "Season 6 Preview",
@@ -2256,5 +2247,203 @@ window.TRACKS = [
   "group": "",
   "badges": [],
   "sort": 0
+ },
+ {
+  "name": "Theme 1",
+  "zh": "",
+  "path": "audio/extra/Activity_030_Nonhuman/Activity_030_Nonhuman__165284343_127.ogg",
+  "section": "events",
+  "group": "Nonhuman",
+  "badges": [],
+  "sort": 1
+ },
+ {
+  "name": "Theme 2",
+  "zh": "",
+  "path": "audio/extra/Activity_030_Nonhuman/Activity_030_Nonhuman__923475959_127.ogg",
+  "section": "events",
+  "group": "Nonhuman",
+  "badges": [],
+  "sort": 2
+ },
+ {
+  "name": "Theme 24",
+  "zh": "",
+  "path": "audio/extra/UI_BGM_02/UI_BGM_02__805737712_127.ogg",
+  "section": "interface",
+  "group": "Menus II",
+  "badges": [],
+  "sort": 24
+ },
+ {
+  "name": "Duat",
+  "zh": "",
+  "path": "audio/extra/Fashion_03_Duat/Fashion_03_Duat__568431050_127.ogg",
+  "section": "fashion",
+  "group": "",
+  "badges": [],
+  "sort": 1
+ },
+ {
+  "name": "Theme 1",
+  "zh": "",
+  "path": "audio/extra/Version_006_Season_06_BGM/Version_006_Season_06_BGM__10733748_127.ogg",
+  "section": "seasons",
+  "group": "Season 6",
+  "badges": [],
+  "sort": 1
+ },
+ {
+  "name": "Theme 2",
+  "zh": "",
+  "path": "audio/extra/Version_006_Season_06_BGM/Version_006_Season_06_BGM__174301185_127.ogg",
+  "section": "seasons",
+  "group": "Season 6",
+  "badges": [],
+  "sort": 2
+ },
+ {
+  "name": "Theme 3",
+  "zh": "",
+  "path": "audio/extra/Version_006_Season_06_BGM/Version_006_Season_06_BGM__183555214_127.ogg",
+  "section": "seasons",
+  "group": "Season 6",
+  "badges": [],
+  "sort": 3
+ },
+ {
+  "name": "Theme 4",
+  "zh": "",
+  "path": "audio/extra/Version_006_Season_06_BGM/Version_006_Season_06_BGM__226840379_127.ogg",
+  "section": "seasons",
+  "group": "Season 6",
+  "badges": [],
+  "sort": 4
+ },
+ {
+  "name": "Theme 5",
+  "zh": "",
+  "path": "audio/extra/Version_006_Season_06_BGM/Version_006_Season_06_BGM__670133588_127.ogg",
+  "section": "seasons",
+  "group": "Season 6",
+  "badges": [],
+  "sort": 5
+ },
+ {
+  "name": "Theme 6",
+  "zh": "",
+  "path": "audio/extra/Version_006_Season_06_BGM/Version_006_Season_06_BGM__729171331_127.ogg",
+  "section": "seasons",
+  "group": "Season 6",
+  "badges": [],
+  "sort": 6
+ },
+ {
+  "name": "Theme 7",
+  "zh": "",
+  "path": "audio/extra/Version_006_Season_06_BGM/Version_006_Season_06_BGM__812006222_127.ogg",
+  "section": "seasons",
+  "group": "Season 6",
+  "badges": [],
+  "sort": 7
+ },
+ {
+  "name": "Theme 8",
+  "zh": "",
+  "path": "audio/extra/Version_006_Season_06_BGM/Version_006_Season_06_BGM__816326007_127.ogg",
+  "section": "seasons",
+  "group": "Season 6",
+  "badges": [],
+  "sort": 8
+ },
+ {
+  "name": "Theme 9",
+  "zh": "",
+  "path": "audio/extra/Version_006_Season_06_BGM/Version_006_Season_06_BGM__978024474_127.ogg",
+  "section": "seasons",
+  "group": "Season 6",
+  "badges": [],
+  "sort": 9
+ },
+ {
+  "name": "Theme 1",
+  "zh": "",
+  "path": "audio/extra/Activity_032_Halloween2026/Activity_032_Halloween2026__53327925_127.ogg",
+  "section": "events",
+  "group": "Halloween 2026",
+  "badges": [],
+  "sort": 1
+ },
+ {
+  "name": "Theme 2",
+  "zh": "",
+  "path": "audio/extra/Activity_032_Halloween2026/Activity_032_Halloween2026__57787947_127.ogg",
+  "section": "events",
+  "group": "Halloween 2026",
+  "badges": [],
+  "sort": 2
+ },
+ {
+  "name": "Theme 3",
+  "zh": "",
+  "path": "audio/extra/Activity_032_Halloween2026/Activity_032_Halloween2026__177711172_127.ogg",
+  "section": "events",
+  "group": "Halloween 2026",
+  "badges": [],
+  "sort": 3
+ },
+ {
+  "name": "Theme 4",
+  "zh": "",
+  "path": "audio/extra/Activity_032_Halloween2026/Activity_032_Halloween2026__274938206_127.ogg",
+  "section": "events",
+  "group": "Halloween 2026",
+  "badges": [],
+  "sort": 4
+ },
+ {
+  "name": "Theme 5",
+  "zh": "",
+  "path": "audio/extra/Activity_032_Halloween2026/Activity_032_Halloween2026__394526793_127.ogg",
+  "section": "events",
+  "group": "Halloween 2026",
+  "badges": [],
+  "sort": 5
+ },
+ {
+  "name": "Theme 6",
+  "zh": "",
+  "path": "audio/extra/Activity_032_Halloween2026/Activity_032_Halloween2026__645668751_127.ogg",
+  "section": "events",
+  "group": "Halloween 2026",
+  "badges": [],
+  "sort": 6
+ },
+ {
+  "name": "Theme 7",
+  "zh": "",
+  "path": "audio/extra/Activity_032_Halloween2026/Activity_032_Halloween2026__702013494_127.ogg",
+  "section": "events",
+  "group": "Halloween 2026",
+  "badges": [],
+  "sort": 7
+ },
+ {
+  "name": "Theme 8",
+  "zh": "",
+  "path": "audio/extra/Activity_032_Halloween2026/Activity_032_Halloween2026__790840730_127.ogg",
+  "section": "events",
+  "group": "Halloween 2026",
+  "badges": [],
+  "sort": 8
+ },
+ {
+  "name": "Theme 9",
+  "zh": "",
+  "path": "audio/extra/Activity_032_Halloween2026/Activity_032_Halloween2026__1051993446_127.ogg",
+  "section": "events",
+  "group": "Halloween 2026",
+  "badges": [],
+  "sort": 9
  }
 ];
