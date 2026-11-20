@@ -389,5 +389,86 @@
   "file": "Activity_032_Halloween2026/Activity_032_Halloween2026__1051993446_127",
   "bytes": 1190519,
   "patch": "127_156560"
+ },
+ {
+  "pack": "Minimum",
+  "wemId": 356168663,
+  "title": null,
+  "file": "Minimum/Minimum__356168663",
+  "bytes": 971384,
+  "name": "Season 2",
+  "section": "interface",
+  "group": "Login Screen",
+  "sort": 2,
+  "event": "Launch_02_Play"
+ },
+ {
+  "pack": "Minimum",
+  "wemId": 421067574,
+  "title": null,
+  "file": "Minimum/Minimum__421067574",
+  "bytes": 989310,
+  "name": "Cabbage Dog",
+  "section": "interface",
+  "group": "Login Screen",
+  "sort": 4,
+  "event": "Launch_04_Play"
+ },
+ {
+  "pack": "Minimum",
+  "wemId": 28850446,
+  "title": null,
+  "file": "Minimum/Minimum__28850446",
+  "bytes": 3610705,
+  "name": "Luo Tianyi (CN)",
+  "section": "interface",
+  "group": "Login Screen",
+  "sort": 6,
+  "event": "Launch_06_Play"
+ },
+ {
+  "pack": "Minimum",
+  "wemId": 424287314,
+  "title": null,
+  "file": "Minimum/Minimum__424287314",
+  "bytes": 1067884,
+  "name": "Chinese Odyssey",
+  "section": "interface",
+  "group": "Login Screen",
+  "sort": 20,
+  "event": "Launch_20_Play"
+ },
+ {
+  "pack": "Launch_27_MaidCafe",
+  "wemId": 707815516,
+  "title": null,
+  "file": "Launch_27_MaidCafe/Launch_27_MaidCafe__707815516_150",
+  "bytes": 1478127,
+  "name": "Maid Café",
+  "section": "interface",
+  "group": "Login Screen",
+  "sort": 27,
+  "event": "Launch_27_Play",
+  "patch": "150_156940"
+ },
+ {
+  "pack": "Activity_036_To27Newyear",
+  "wemId": 648946352,
+  "title": null,
+  "file": "Activity_036_To27Newyear/Activity_036_To27Newyear__648946352_150",
+  "bytes": 1427040,
+  "name": "New Year 2027",
+  "section": "events",
+  "patch": "150_156940"
+ },
+ {
+  "pack": "Fashion_07_2026Xmas",
+  "wemId": 327974651,
+  "title": null,
+  "file": "Fashion_07_2026Xmas/Fashion_07_2026Xmas__327974651_150",
+  "bytes": 1355717,
+  "name": "Christmas 2026",
+  "section": "fashion",
+  "patch": "150_156940"
  }
 ]

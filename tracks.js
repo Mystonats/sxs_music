@@ -2445,5 +2445,68 @@ window.TRACKS = [
   "group": "Halloween 2026",
   "badges": [],
   "sort": 9
+ },
+ {
+  "name": "Season 2",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__356168663.ogg",
+  "section": "interface",
+  "group": "Login Screen",
+  "badges": [],
+  "sort": 2
+ },
+ {
+  "name": "Cabbage Dog",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__421067574.ogg",
+  "section": "interface",
+  "group": "Login Screen",
+  "badges": [],
+  "sort": 4
+ },
+ {
+  "name": "Luo Tianyi (CN)",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__28850446.ogg",
+  "section": "interface",
+  "group": "Login Screen",
+  "badges": [],
+  "sort": 6
+ },
+ {
+  "name": "Chinese Odyssey",
+  "zh": "",
+  "path": "audio/extra/Minimum/Minimum__424287314.ogg",
+  "section": "interface",
+  "group": "Login Screen",
+  "badges": [],
+  "sort": 20
+ },
+ {
+  "name": "Maid Café",
+  "zh": "",
+  "path": "audio/extra/Launch_27_MaidCafe/Launch_27_MaidCafe__707815516_150.ogg",
+  "section": "interface",
+  "group": "Login Screen",
+  "badges": [],
+  "sort": 27
+ },
+ {
+  "name": "New Year 2027",
+  "zh": "",
+  "path": "audio/extra/Activity_036_To27Newyear/Activity_036_To27Newyear__648946352_150.ogg",
+  "section": "events",
+  "group": "",
+  "badges": [],
+  "sort": 0
+ },
+ {
+  "name": "Christmas 2026",
+  "zh": "",
+  "path": "audio/extra/Fashion_07_2026Xmas/Fashion_07_2026Xmas__327974651_150.ogg",
+  "section": "fashion",
+  "group": "",
+  "badges": [],
+  "sort": 0
  }
 ];
